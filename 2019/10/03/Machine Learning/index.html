@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Machine Learning Interview Questions | Pinecone</title><meta name="description" content="Machine Learning Interview Questions"><meta name="keywords" content="Machine Learning, Interview"><meta name="author" content="Pinecone"><meta name="copyright" content="Pinecone"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="http://jwu424@github.io/2019/10/03/Machine%20Learning/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Machine Learning Interview Questions"><meta name="twitter:description" content="Machine Learning Interview Questions"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><meta property="og:type" content="article"><meta property="og:title" content="Machine Learning Interview Questions"><meta property="og:url" content="http://jwu424@github.io/2019/10/03/Machine%20Learning/"><meta property="og:site_name" content="Pinecone"><meta property="og:description" content="Machine Learning Interview Questions"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="Udacity Final Project" href="http://jwu424@github.io/2019/10/03/Udacity%20Final%20Project/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'true',
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Bookmark',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  copyright: undefined,
+  copy_copyright_js: false
+  
+}</script></head><body><canvas class="fireworks"></canvas><div id="header"> <div id="page-header"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Pinecone</a></span><i class="fa fa-bars fa-fw toggle-menu pull-right close" aria-hidden="true"></i><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right" id="search_button"></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">3</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">3</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png)"><div id="post-info"><div id="post-title"><div class="posttitle">Machine Learning Interview Questions</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-10-03<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> Updated 2019-10-24</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Machine-Learning/">Machine Learning</a></span><div class="post-meta-wordcount"><span>Word count: </span><span class="word-count">4.8k</span><span class="post-meta__separator">|</span><span>Reading time: 29 min</span><span class="post-meta__separator">|</span><span>Post View: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><p>You can find the questions <a href="https://rpubs.com/JDAHAN/172473" target="_blank" rel="noopener"><strong>here</strong></a>. And I reorganized the answers and added some parts I think are necessary. </p>
+<ol>
+<li><p>Cross validation</p>
+<p>Cross validation is a model validation technique for assessing how the results of a statistical analysis will generalize to an independent data set, particularly in cases when you need to mitigate overfitting. </p>
+<p>There are three kinds of cross validation. </p>
+<ul>
+<li>LOOCV: each time, we use n-1 data points to build the model and use the rest one to test the model. Then after building n models, we average the test error. Since we almost use all data to build the model, we will get an unbiased estimator of test error. However, since the data set used to build the model are almost identical, the results of each model are highly correlated. Because the variance of a mean of quantiles increases when the correlation of these quantiles increase, the variance of test error will relatively higher than k-folds cv. What’s more, the computation cost will relatively large.</li>
+<li>K-folds CV: We split our data to k folds. Each time we use K-1 folds to build the model and finally average the test error from K models.</li>
+<li>Stratified CV: What to make sure that each fold is a good representation of the whole data set. Basically sample: keep the same proportion of different classes in each fold.</li>
+</ul>
+<p>When to use:</p>
+<ul>
+<li>Estimate the model’s predictive performance on unseen data more robustly</li>
+<li>Compare different models</li>
+<li>Choose hyper parameters for models</li>
+</ul>
+<p>Notes: CV doesn’t prevent the overfitting. Actually it just helps to identify a case of overfitting.</p>
+</li>
+<li><p>Robust or accurate algorithms?</p>
+<p>The ultimate goal of our model or algorithm is to predicate accurately as well as have good generalization capacity. However, it is actually a trade-off problem. </p>
+<p>If our model is simple, definitely we will not be able to capture the whole fluctuation of our data, usually just in a rough manner. In this case, the model is not accurate and also not robust, cause our model can’t even capture the actual fluctuation from training data.</p>
+<p>If our model is too complex, then the accuracy of our model on training dataset will definitely be very high. However, for the testing dataset, the accuracy will be relatively lower, cause our model may capture some random fluctuation, such as measure errors during from collection process. In this case, our model is not robust.</p>
+<p>Occam’s razor is a way to deal with this problem. The idea behind this way is that the random fluctuation, which are only present by accident in the data, tends to have complex forms. Thus, key point of this way is simpler models are preferred if more complex models don’t have significant improve the predictions. </p>
+</li>
+<li><p>How to define metrics.</p>
+<p>First, it depends on the task: regression or classification?</p>
+<p>Second, regression:</p>
+<ul>
+<li><p>RMSE: gives a relatively high weight to large errors. And each point provides the same info about the error variation. </p>
+<p>$R M S E=\sqrt{\frac{1}{n} \sum<em>{i=1}^{n}\left(y</em>{i}-\hat{y}_{i}\right)^{2}}$</p>
+</li>
+<li><p>MAE: all the individual differences are weighted equally in the average. And each point provides the same info about the error variation.</p>
+<p>$M A E=\frac{1}{n} \sum<em>{i=1}^{n}\left|y</em>{i}-\hat{y}_{i}\right|$ </p>
+</li>
+<li><p>RMSLE: penalizes an under-predicted estimate greater then an over-predicted estimate</p>
+<p>$R M S L E=\sqrt{\frac{1}{n} \sum<em>{i=1}^{n}\left(\log \left(p</em>{i}+1\right)-\log \left(a_{i}+1\right)\right)^{2}}$</p>
+<p>Where $p_i$ is the ith prediction and $a_i$ is the ith actual response.</p>
+</li>
+<li><p>WMAE: each point doesn’t provide the same info.</p>
+<p>$W M A E=\frac{1}{\sum w<em>{i}} \sum</em>{i=1}^{n} w<em>{i}\left|y</em>{i}-\hat{y}_{i}\right|$ </p>
+</li>
+</ul>
+<p>Third, classification:</p>
+<p><img alt="page1" data-src="image/page1.png" class="lozad"></p>
+</li>
+</ol>
+<ol>
+<li><p>Explain what regularization is and why it is useful. What are the beneﬁts and drawbacks of speciﬁc methods, such as ridge regression and lasso?<br>Regularization is a method to improve the generalization of a model and decrease the complexity of the model. Usually, we will add a regular term to the loss function.</p>
+<p>Ridge:</p>
+<ul>
+<li>Add L2 penalty to loss function, that is $\lambda \sum \beta_j^2$, where $\lambda$ is a hyper parameter and control the bias-variance tradeoff. Usually can be determined by cross-validation.</li>
+<li>$\hat{\beta}^{\text {ridge}}=\underset{\beta}{\operatorname{argmin}}\left{\sum<em>{i=1}^{n}\left(y</em>{i}-\beta<em>{0}-\sum</em>{j=1}^{p} x<em>{i j} \beta</em>{j}\right)^{2}+\lambda \sum<em>{j=1}^{p} \beta</em>{j}^{2}\right}$</li>
+</ul>
+<p>Lasso:</p>
+<ul>
+<li>Add L1 penalty to loss function, which is $\lambda \sum |\beta_j|$. Variable selections.</li>
+<li>$\hat{\beta}^{\text {lasso}}=\underset{\beta}{\operatorname{argmin}}\left{\sum<em>{i=1}^{n}\left(y</em>{i}-\beta<em>{0}-\sum</em>{j=1}^{p} x<em>{i j} \beta</em>{j}\right)^{2}+\lambda \sum<em>{j=1}^{p}\left|\beta</em>{j}\right|\right}$</li>
+</ul>
+</li>
+<li><p>Explain what a local optimum is and why it is important in a speciﬁc context, such as K-means clustering. What are speciﬁc ways of determining if you have a local optimum problem? What can be done to avoid local optima?</p>
+<p>Local optimum is an optimum within a set of neighboring candidate solutions. </p>
+<p>Global optimum is an optimum among all solutions. </p>
+<p>For K-means, it has been proved that the objective cost function will always decrease until a local optimum is reached. And the results will depend on the initial point. </p>
+<p>Determine: we can choose different starting points and run algorithms. If we get the same result, then it is global optimum. Else local optimum.</p>
+<p>Avoid: </p>
+<ul>
+<li>Use optimization algorithm like momentum SGD, instead of vanilla SGD</li>
+<li>Repeat algorithms with different starting points and take the solution with the lowest cost.</li>
+</ul>
+</li>
+<li><p>Assume you need to generate a predictive model using multiple regression. Explain how you intend to validate this model.</p>
+<p>First, I will check the $R^2$, which means that % of variance explained by the model. Or we can use $adjusted-R^2$. </p>
+<p>$R^2=\frac{RSS<em>{reg}}{RSS</em>{Total}}$  and $adjusted-R^2=1-(1-R^2)\frac{n-1}{n-p-1}$</p>
+<p>Second, I will check the diagnostic plots.</p>
+<ul>
+<li>Residual vs fitted values: check whether the residual has non-linear pattern</li>
+<li>QQ plot: check the normal assumption of residual</li>
+<li>Standardized residual vs fitted values: check equal variance</li>
+<li>Standardized residual vs leverage: check the influential points by cook’s distance.</li>
+<li>Outliers and influential points. </li>
+</ul>
+</li>
+<li><p>Explain what precision and recall are. How do they relate to the ROC curve?</p>
+<p>See question3</p>
+</li>
+<li><p>What is latent semantic indexing? What is it used for? What are the speciﬁc limitations of the method?</p>
+<p>LSI is an algorithms that using SVD to identify patterns in the relationship between the terms and concepts contained in an unstructured collection of text. </p>
+<ul>
+<li><p>The idea: words used in the same context tend to have similar meanings.</p>
+</li>
+<li><p>Ex: two synonyms may never occur in the same passage but should have highly associated representations.</p>
+</li>
+</ul>
+<p>Used for :</p>
+<ul>
+<li>Learning correct word meanings</li>
+<li>Information retrieval</li>
+<li>Sentiment analysis</li>
+</ul>
+<p>Limitation:</p>
+<ul>
+<li>requires relatively high computational performance and memory in comparison to other information retrieval techniques.</li>
+<li>difficulty in determining the optimal number of dimensions to use for performing the SVD</li>
+</ul>
+</li>
+<li><p>Explain what resampling methods are and why they are useful.</p>
+<p>Resampling methods means repeatedly drawing samples from a training dataset and refitting a model on each sample in order to obtain additional information about the model.</p>
+<p>Types:</p>
+<ul>
+<li>Bootstrap: sample with replacement. Usually used to quantify the uncertainty associated with a given estimator.</li>
+<li>CV: sample without replacement. Usually used to evaluate the performance of models, model selection and choose hyperparameter.</li>
+</ul>
+</li>
+<li><p>What is principal component analysis? Explain the sort of problems you would use PCA for. Also explain its limitations as a method</p>
+<p>PCA is dimensional reduction method that using orthogonal transformation to convert a set of observations of correlated variables into a set of values of linearly uncorrelated variables。</p>
+<p>Algorithms: </p>
+<ul>
+<li>Standardization: PCA is sensitive to the relative scaling of the original variable.</li>
+<li>Compute the covariance matrix $\Sigma$</li>
+<li>Compute the eigenpairs of $\Sigma$</li>
+<li>Choose first K largest principal components so as to retain x% of variance</li>
+</ul>
+<p>Application:</p>
+<ul>
+<li>Better Perspective and less complexity</li>
+<li>Better visualization: PCA to reduce the data to 2D or 3D.</li>
+<li>Reduce size: have too much data and we are going to use process-intensive algorithms (like many supervised algorithms) on the data so we need to get rid of redundancy .</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>Not scale invariant</li>
+<li>The direction of largest variance are assumed to be of the most interest</li>
+<li>Only consider orthogonal transformation</li>
+<li>PCA is based on mean and variance. For some distribution, they are not characterized by these.</li>
+<li>If variables are correlated, then PCA works. Else, it just reorders the variables according to their variances.</li>
+</ul>
+<p><a href="https://www.quora.com/When-and-where-do-we-use-PCA" target="_blank" rel="noopener">https://www.quora.com/When-and-where-do-we-use-PCA</a></p>
+<p><a href="https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c" target="_blank" rel="noopener">https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c</a></p>
+</li>
+<li><p>Explain what a false positive and a false negative are. Why is it important these from each other?Provide examples when false positives are more important than false negatives, false negatives are more important than false positives and when these two types of errors are equally important </p>
+<p>False Positive: Improperly reporting the presence of a condition when it is not in reality. </p>
+<p>Ex: HIV positive test shows positive whereas the patient is actually HIV negative.</p>
+<p>False Negative: Improperly reporting the absence of a condition when it is in reality.</p>
+<p>Ex: Not detect a disease when the patient has the disease. </p>
+<p>Importance:</p>
+<ul>
+<li>FP &gt; FN:  In a non-contagious disease, where treatment delay doesn’t have any long-term consequences but the treatment itself is grueling. Ex: HIV test: psychological impact.</li>
+<li>FP &lt; FN: If early treatment is important for good outcomes. Ex: Cancer detection</li>
+<li>FP = FN: Many cases.</li>
+</ul>
+</li>
+<li><p>What is the difference between supervised learning and unsupervised learning? Give concrete examples </p>
+<p>Supervised learning: Inferring a function from labeled training data.</p>
+<ul>
+<li>Wish to better understand the relationship between a response variable and predictor variables.</li>
+<li>Wish to build a model to predict the response for future unknown observations.</li>
+</ul>
+<p>Ex:</p>
+<ul>
+<li>Algorithms: SVM, LR, random forest….</li>
+<li>Predict the price of house from some physical variables, like the number of rooms, size …</li>
+</ul>
+<p>Unsupervised learning: inferring a function to describe the hidden structure of unlabeled data.</p>
+<p>Ex:</p>
+<ul>
+<li>Algorithms: K-means, PCA, KNN, ….</li>
+<li>Ex: find some similar customers, basing on their historical transactions.</li>
+</ul>
+</li>
+<li><p>What does NLP stand for? </p>
+<p>NLP: Natural Language Processing</p>
+<ul>
+<li>Interaction between human language and computer language</li>
+<li><p>Involves natural language understanding</p>
+<p>Task:</p>
+</li>
+<li><p>Machine translation</p>
+</li>
+<li>Information retrieval</li>
+<li>Sentiment analysis</li>
+<li>Question answering</li>
+</ul>
+</li>
+<li><p>What are feature vectors? </p>
+<ul>
+<li>N-dimension vector of numerical features that represent numeric or symbolic characteristics.</li>
+<li>Feature space: vector space associated with these vectors.</li>
+<li>In <strong>image processing</strong>, features can be gradient magnitude, color, grayscale intensity, edges, areas, and more.</li>
+<li>In <strong>speech recognition</strong>, features can be sound lengths, noise level, noise ratios, and more.</li>
+</ul>
+</li>
+<li><p>When would you use random forests Vs SVM and why? </p>
+<ul>
+<li>Multi-class classification problem: SVM require one-over-all, which is memory intensive.</li>
+<li>Need feature importance</li>
+<li>Need to run faster, since SVM need more tuning process (kernel, hyperparameters)</li>
+<li>Semi-supervised learning problems</li>
+</ul>
+</li>
+<li><p>How do you take millions of users with 100’s transactions each, amongst 10k’s of products and group the users together in meaningful segments? </p>
+</li>
+</ol>
+<ol>
+<li><p>How do you know if one algorithm is better than other? </p>
+<p><strong>Performance:</strong> </p>
+<p>Compare the performances fo two algorithms and assess the statistical significance</p>
+<ul>
+<li>Do multiple k-fold CV, and take the mean and sd of the metric (Accurate, auc, …)</li>
+<li>Use paired t-test, sign-test, Wilcoxon signed rank test</li>
+</ul>
+<p><strong>Efficiency:</strong></p>
+<p>Basing on the time and space complexity.</p>
+<p><strong>Interpretable:</strong></p>
+<p>Sometimes need to interpret the meaning of coefficient or model. May use some simpler model, like LR.</p>
+</li>
+</ol>
+<ol>
+<li>How do you test whether a new credit risk scoring model works? </li>
+</ol>
+<ol>
+<li><p>What is: collaborative filtering, n-grams, cosine distance? </p>
+<p><strong>Collaborative filtering:</strong></p>
+<ul>
+<li>Techniques used in recommendation system</li>
+<li>Filter for information or patterns using techniques involving collaboration of multiple agents: viewpoints, data sources.</li>
+<li><ol>
+<li>A user expresses his/her preferences by rating items(movies, products…)</li>
+<li>The systems try to match this user’s rating against other users’ and finds people with most similar tastes.</li>
+<li>With similar tastes, the systems recommend items that the similar users have rated highly but not yet being rated by this user.</li>
+</ol>
+</li>
+</ul>
+<p><strong>N-grams:</strong></p>
+<ul>
+<li>Techniques used in NLP</li>
+<li>Contiguous sequence of n items from a given sequence of text or speech</li>
+<li>2-grams, 3-grams, ….</li>
+<li>N-gram model: $P(X<em>i|X</em>{i-(n-1)…X_{i-1}})$. </li>
+<li>Assume each word depends only on the n-1 last words</li>
+<li>Problems: When we face infrequent n-grams. We can smooth the probability distributions by assigning non-zero probabilities to unseen words or n-grams.</li>
+</ul>
+<p><strong>Cosine distance:</strong></p>
+<ul>
+<li><strong>Cosine similarity</strong> is a <a href="https://en.wikipedia.org/wiki/Measure_of_similarity" target="_blank" rel="noopener">measure of similarity</a> between two non-zero vectors of an <a href="https://en.wikipedia.org/wiki/Inner_product_space" target="_blank" rel="noopener">inner product space</a> that measures the <a href="https://en.wikipedia.org/wiki/Cosine" target="_blank" rel="noopener">cosine</a> of the angle between them. </li>
+<li>Use to measure the similarity of two documents.</li>
+<li>1: perfect similar. 0: orthogonal.</li>
+<li>Measure the orientation, not magnitude</li>
+<li>$Cos-similarity(A, B)=\frac{<a, b>}{||A||*||B||}$</a,></li>
+</ul>
+</li>
+<li><p>What is better: good data or good models? And how do you define “good”? Is there a universal good model? Are there any models that are definitely not so good? </p>
+<p>Why important?</p>
+<ul>
+<li>Good data is definitely important than good models. Garbage in, Garbage out.</li>
+<li>Usually, we spend most of time collecting and cleaning data.</li>
+</ul>
+<p>How to define good?</p>
+<ul>
+<li>Data are relevant to the task needed to be handle</li>
+<li>Good model can generalize to external data for supervised learning task, can find the hidden pattern for unsupervised learning.</li>
+</ul>
+<p>Universal good models?</p>
+<ul>
+<li>No, otherwise overfitting problem will not exist.</li>
+<li>Can have universal good algorithms, but not for models.</li>
+<li>Model constructed on a specific dataset will not be effective in another dataset with the same area. Thus, need to be fine-tune </li>
+</ul>
+<p>Some models that are not so good?</p>
+<ul>
+<li>‘All models are wrong but some are useful’. Said by George Box</li>
+<li>Each model has its own scope of application.</li>
+</ul>
+</li>
+<li><p>Why is naive Bayes so bad? How would you improve a spam detection algorithm that uses naive Bayes? </p>
+<p>Because it assumes all features are independent, which almost not exist in real life.</p>
+<p>How to improve:</p>
+<ul>
+<li>Instead of assuming that each word in an email is independent, you could compute the conditional likelihoods of words occurring in sequence.</li>
+<li>Spell check for each words prior to classification.</li>
+</ul>
+</li>
+<li><p>What are the drawbacks of linear model? Are you familiar with alternatives (Lasso, ridge regression)? </p>
+<p>Drawbacks:</p>
+<ul>
+<li>Assume linearity of the errors</li>
+<li>Can’t be used for binary outcomes</li>
+<li>Only looks at the mean of the dependent variable</li>
+<li>Not robust for outliers.</li>
+<li>Assume we have independent features</li>
+<li>Easy to overfit, especially when we have more features than observations.</li>
+</ul>
+<p>Go back to Q4</p>
+</li>
+<li><p>Do you think 50 small decision trees are better than a large one? Why? </p>
+<p>It depends.</p>
+<p>If we have enough data, then we can produce 50 different decision trees basing on different subset of columns and rows, then it will be better.</p>
+<p>But if we don’t have enough data or each tree is relatively small, then a big tree with properly prune will be better.</p>
+<p>Reasons:</p>
+<ul>
+<li>Less prone to overfit</li>
+<li>Average out model bias</li>
+<li>If have large data, it is not easy to fit in a single model, time and space complexity.</li>
+</ul>
+</li>
+<li><p>Why is mean square error a bad measure of model performance? What would you suggest instead? </p>
+<ul>
+<li>gives a relatively high weight to large errors. And each point provides the same info about the error variation. </li>
+<li>If the linear assumption is violated, then it is not a good measure.</li>
+<li><p><img alt="page2" data-src="image/page2.png" class="lozad"></p>
+</li>
+<li><p>We can instead use mean absolute deviation.</p>
+</li>
+</ul>
+</li>
+<li><p>How can you prove that one improvement you’ve brought to an algorithm is really an improvement over not doing anything? Are you familiar with A/B testing? </p>
+<p>There are three ways to do it.</p>
+<ul>
+<li><p>Using test, basing on algorithms</p>
+<ul>
+<li><p>Like in linear regression, we can use F-test or ANOVA to test if the new model is better than another one.</p>
+</li>
+<li><p>$H_0:$ model 2 doesn’t provide a significantly better fit than model 1. </p>
+</li>
+<li><p>$F=\frac{(RSS_1-RSS_2)/(p_2-p_1)}{RSS_2/n-p_2}\sim F(p_2-p_1, n-p_2)$</p>
+</li>
+<li><p>$p_1$: number of parameters of model 1</p>
+<p>$p_2$: number of parameters of model 2</p>
+<p>$n$:  number of observations </p>
+</li>
+</ul>
+</li>
+<li><p>AB testing</p>
+<ul>
+<li>EX: if we have a new recommendation algorithms for movies, we want to test the effect of it, comparing with the old one. </li>
+<li>We can create two pages with different recommendation algorithms and randomly assign people to them. </li>
+<li>The metric we use are the number of recommended movies that people watch. Then after collecting enough data, we can do a t-test to compare.</li>
+</ul>
+</li>
+<li><p>Using CV or new dataset</p>
+<p>We can use our algorithms to predict new data and compare the accuracy or RMSE.</p>
+</li>
+</ul>
+</li>
+<li><p>What do you think about the idea of injecting noise in your data set to test the sensitivity of your models? </p>
+<p>Effect would be similar to regularization: avoid overfitting.</p>
+<p>We can use it to expand our data set, especially when we have a small data set. We can add a small amount of unstructured noise to our data to create more and help our model to learn better. </p>
+</li>
+<li><p>Do you know / used data reduction techniques other than PCA? What do you think of step-wise regression? What kind of step-wise techniques are you familiar with? </p>
+<p>Data reduction:</p>
+<ul>
+<li><p>PCA is a statistical procedure that uses an orthogonal transformation to convert a set of observations of correlated variables into a set of values of linearly uncorrelated variables.</p>
+</li>
+<li><p>ICA is a method to find independent components by maximizing the statistical independence of estimated components.</p>
+</li>
+<li><p>LDA (Linear Discriminant Analysis) is a dimensionality reduction technique, aiming to project a dataset onto a lower-dimensional space with good class-separability in order avoid overfitting and also reduct computational costs. See <a href="https://sebastianraschka.com/Articles/2014_python_lda.html" target="_blank" rel="noopener">blogs</a>.</p>
+</li>
+</ul>
+<p>Step-wise regression:</p>
+<ul>
+<li><strong>stepwise regression</strong> is a method of fitting regression models in which the choice of predictive variables is carried out by an automatic procedure.</li>
+<li><p>Basing on some criterion, each time we will add one predictor variable to model or or delete one. </p>
+</li>
+<li><p>We can choose forward, backward or bidirectional.</p>
+</li>
+<li>Forward: we start with no variables in the model, just the intercept. Then we test the addition of each variable using a chosen criterion and add the variable that gives the most statistically significant improvement of the fit. Repeat until maximum.</li>
+<li>Backward: Starting with all variables. Each time we try to test the deletion of each variable using a chosen criterion and delete the variable whose loss gives the most statistical significant.</li>
+<li><p>Bidirectional: consider forward and backward together, testing at each step for variables to be included or excluded.</p>
+</li>
+<li><p>Criterion:  <a href="https://en.wikipedia.org/wiki/Adjusted_R-squared" target="_blank" rel="noopener">adjusted <em>R</em>2</a>, <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" target="_blank" rel="noopener">Akaike information criterion</a>, <a href="https://en.wikipedia.org/wiki/Bayesian_information_criterion" target="_blank" rel="noopener">Bayesian information criterion</a>, <a href="https://en.wikipedia.org/wiki/Mallows&#39;s_Cp" target="_blank" rel="noopener">Mallows’s <em>Cp</em></a>, <a href="https://en.wikipedia.org/wiki/PRESS_statistic" target="_blank" rel="noopener">PRESS</a>, or <a href="https://en.wikipedia.org/wiki/False_discovery_rate" target="_blank" rel="noopener">false discovery rate</a>.</p>
+</li>
+</ul>
+</li>
+<li><p>How would you define and measure the predictive power of a metric? </p>
+<ul>
+<li>Predictive power of  a metric: the accuracy of a metric’s success at predicting the empirical.</li>
+<li>They are all domain specific</li>
+<li>Example: in field like manufacturing, failure rates of tools are easily observable. A metric can be trained and the success can be easily measured as the deviation over time from the observed.</li>
+<li>In information security: if the metric says that an attack is coming and one should do X. Did the recommendation stop the attack or the attack never happened? </li>
+</ul>
+</li>
+<li><p>Do we always need the intercept term in a regression model? </p>
+<p>Yes. Reasons:</p>
+<ul>
+<li>It guarantees that the mean of error is always 0</li>
+<li>It makes sure that all other regression parameters are unbiased, no matter the intercept is significant or not.</li>
+<li>the regression line floats up and down, by adjusting the constant, to a point where the mean of the residuals is zero </li>
+</ul>
+<p>When can remove: know that the true data generating function is <em>perfectly</em> linear throughout the range of 𝑋 that you are working with and all the way down to 0.</p>
+</li>
+<li><p>What are the assumptions required for linear regression? What if some of these assumptions are violated? </p>
+<p>Assumptions:</p>
+<ul>
+<li><p>The data used in fitting the model is representative of the population</p>
+</li>
+<li><p>The true underlying relation between and is linear</p>
+</li>
+<li>Variance of the residuals is constant (homoscedastic, not heteroscedastic) </li>
+<li>The residuals are independent</li>
+<li>The residuals are normally distributed </li>
+</ul>
+<p>Predict from : 1) + 2)<br>Estimate the standard error of predictors: 1) + 2) + 3)<br>Get an unbiased estimation of from : 1) + 2) + 3) + 4)<br>Make probability statements, hypothesis testing involving slope and correlation, confidence intervals: 1) + 2) + 3) + 4) + 5) </p>
+<p>Plots:</p>
+<ul>
+<li>QQ-plot: check the normal assumption</li>
+<li>Y~X: check the linearity, outlier and transformation</li>
+<li>Residual plot: residual~X - independent; residual~fitted plot - constant variation</li>
+<li>partial regression plots: check the relationship between X</li>
+<li>check the correlation matrix of the independent variables</li>
+</ul>
+<p>Violation:</p>
+<ul>
+<li>linearity: applying a nonlinear transformation to the dependent and/or independent variables <em>if</em> you can think of a transformation that seems appropriate.</li>
+<li>Independent(Multicollinearity): applying some algorithms like PCA to get independent variables. Or we can use VIF to delete some variables, or use stepwise regression with AIC/BIC.</li>
+<li>heteroscedasticity:  If the dependent variable is strictly positive and if the residual-versus-predicted plot shows that the size of the errors is proportional to the size of the predictions (i.e., if the errors seem consistent in percentage rather than absolute terms), a log transformation applied to the dependent variable may be appropriate.</li>
+<li>Normality: <ul>
+<li>The dependent and independent variables in a regression model do not need to be normally distributed by themselves—only the prediction errors need to be normally distributed. But if the distributions of some of the variables that <em>are</em> random are extremely asymmetric or long-tailed, it may be hard to fit them into a linear model whose errors will be normally distributed, and explaining the shape of their distributions may be an interesting topic all by itself.</li>
+<li>two or more <em>subsets</em> of the data having <em>different statistical properties</em>, in which case separate models should be built</li>
+<li>the problem with the error distribution is mainly due to <em>one or two very large errors</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>What is collinearity and what to do with it? How to remove multicollinearity? </p>
+<p><strong>Collinearity/Multicollinearity:</strong> </p>
+<ul>
+<li>In multiple regression: when two or more variables are highly correlated</li>
+<li><p>They provide redundant information</p>
+</li>
+<li><p>In case of perfect multicollinearity: doesn’t exist, the design matrix isn’t invertible</p>
+</li>
+<li><p>It doesn’t affect the model as a whole, doesn’t bias results</p>
+</li>
+<li><p>The standard errors of the regression coefficients of the affected variables tend to be large</p>
+</li>
+<li>The test of hypothesis that the coefficient is equal to zero may lead to a failure to reject a false null hypothesis of no effect of the explanatory (Type II error)</li>
+<li>Leads to overfitting </li>
+</ul>
+<p><strong>Remove multicollinearity:</strong> </p>
+<ul>
+<li>Drop some of affected variables</li>
+<li>Principal component regression: gives uncorrelated predictors - Combine the affected variables</li>
+<li>Ridge regression</li>
+<li>Partial least square regression </li>
+</ul>
+<p><strong>Detection of multicollinearity:</strong> </p>
+<ul>
+<li>Large changes in the individual coefficients when a predictor variable is added or deleted</li>
+<li>Insignificant regression coefficients for the affected predictors but a rejection of the joint<br>hypothesis that those coefficients are all zero (F-test)</li>
+<li>VIF: the ratio of variances of the coefficient when fitting the full model divided by the variance of the coefficient when fitted on its own </li>
+<li>Rule of thumb: indicates multicollinearity</li>
+<li>Correlation matrix, but correlation is a bivariate relationship whereas multicollinearity is multivariate </li>
+</ul>
+</li>
+<li><p>How to check if the regression model fits the data well? </p>
+<p>Use $R^2$ or adjusted -$R^2$ to check. ———relative measure of fit.</p>
+<ul>
+<li>$R^2 = \frac{RSS<em>{reg}}{RSS</em>{total}}=1-\frac{RSS<em>{res}}{RSS</em>{total}}$</li>
+<li>It describes the percentage of the total variance that can be explained by our model</li>
+<li>Since it always increases when adding new variables, adjust-$R^2$ is used sometimes. </li>
+<li>Adjusted-$R^2=1-(1-R^2)*\frac{n-1}{n-p-1}$</li>
+</ul>
+<p>Use RMSE. ———-absolute measure.</p>
+<p>Use F-test.</p>
+</li>
+<li><p>What is a decision tree? </p>
+<p>A decision tree is a decision support tool that uses a tree-like model of decisions and their possible consequence, including chance event outcomes, resource costs, and utility.</p>
+<p><strong>Step:</strong></p>
+<ul>
+<li>Take the entire data set as input</li>
+<li>Search for a split that maximizes the ‘separation’ of the classes. A split is any test that divides the data in two groups.</li>
+<li>Apply the split to the input data</li>
+<li>Reapply the above steps</li>
+<li>Stop when we meet some stopping criterion</li>
+<li>Pruning the tree if the tree is too complex or have too many nodes.</li>
+</ul>
+<p><strong>Purity measure:</strong> information gain, Gini coefficient.</p>
+<p><strong>Find a split:</strong> Greedy search, like C4.5; randomly select attributes and split points, like random forest.</p>
+<p><strong>Stopping criteria:</strong> methods vary from minimum size, particular confidence in prediction, purity criteria threshold </p>
+<p><strong>Pruning:</strong> reduced error pruning, out of bag error pruning (ensemble methods) </p>
+</li>
+<li><p>What impurity measures do you know? </p>
+<ul>
+<li><p>$Gini=1-\sum_jp_j^2$</p>
+</li>
+<li><p>$Entropy=\sum_jp_jlog_2p_j$</p>
+<script type="math/tex; mode=display">Information\_Gain =H(paraent)-H(\sum children\_entroy)</script><script type="math/tex; mode=display">=-\sum_{i=1}^{J} p_{i} \log _{2} p_{i}-\sum_{a} p(a) \sum_{i=1}^{J}-\operatorname{Pr}(i | a) \log _{2} \operatorname{Pr}(i | a)</script></li>
+</ul>
+</li>
+<li><p>What is random forest? Why is it good? </p>
+<p><strong>Random Forest:</strong></p>
+<ul>
+<li>Idea: several weaker learners can be combined to a strong learner.</li>
+<li>Building several decision trees on bootstrapped training sample of data</li>
+<li>On each tree, each time a split is considered, a random sample of candidates, out of all predictors</li>
+<li>Rule of thumb: at each split, $m=\sqrt{p}$</li>
+<li>Predictions: at the majority rule </li>
+</ul>
+<p><strong>Why good?</strong></p>
+<ul>
+<li>Very good performance, since it choose the subset of variables.(decorrelate the features)</li>
+<li>Can model non-linear class boundaries</li>
+<li>Generalization error for free: no cross-validation needed, gives an unbiased estimate of the generalization error as the trees is built</li>
+<li>Generates variable importance </li>
+</ul>
+</li>
+<li><p>How do we train a logistic regression model? How do we interpret its coefficients? </p>
+<p>$log(odds)=log(\frac{P(y=1|x)}{P(y=0|x)})=$ is a  linear function of the input features</p>
+<p>Cost function: $J(\beta)-\frac{1}{m}\sum<em>{i=1}^my^ilog(h</em>{\beta}(x^i))+(1-y^i)log(1-h_{\beta}(x^i))$</p>
+<p>Where $h_{\beta}(x)=g(\beta^Tx)$ and $g(z)=\frac{1}{1+e^{-z}}$</p>
+<p>Then we can use SGD to iterative update the parameters.</p>
+<p><strong>Interpretation of the coefficients:</strong> the increase of $log(odds)$ for the increase of one unit of a predictor, given all the other predictors are fixed. </p>
+</li>
+</ol>
+<ol>
+<li><p>What is the maximal margin classifier? How this margin can be achieved? </p>
+<ul>
+<li><p>When data can be split perfectly by a hyperplane, there actually exists an infinity number of these hyperplane.</p>
+</li>
+<li><p>Idea: A hyperplane: a hyperplane can usually be shifted a tiny bit up, or down, or rotated, without coming into contact with any of the observations.</p>
+</li>
+<li>Large margin classifier: choosing the hyperplance that is farthest from the training observations </li>
+<li>Idea: This kind of classifier will be the most robust one.</li>
+<li>Can be achieved by support vector, just SVM algorithms.</li>
+</ul>
+</li>
+<li><p>What is a kernel? Explain the kernel trick</p>
+<p>Kernel is a function that can project our input data into higher dimension space, which bridges linearity and non-linearity.</p>
+<p>Kernel trick:</p>
+<ul>
+<li><p>Assume we have two data points and we want to project them to 9-dimensional space.</p>
+<p> $\begin{array}{l}{\mathbf{x}=\left(x<em>{1}, x</em>{2}, x<em>{3}\right)^{T}} \ {\mathbf{y}=\left(y</em>{1}, y<em>{2}, y</em>{3}\right)^{T}}\end{array}$</p>
+</li>
+<li><p>The results:</p>
+<p>$\begin{array}{c}{\phi(\mathbf{x})=\left(x<em>{1}^{2}, x</em>{1} x<em>{2}, x</em>{1} x<em>{3}, x</em>{2} x<em>{1}, x</em>{2}^{2}, x<em>{2} x</em>{3}, x<em>{3} x</em>{1}, x<em>{3} x</em>{2}, x<em>{3}^{2}\right)^{T}} \ {\phi(\mathbf{y})=\left(y</em>{1}^{2}, y<em>{1} y</em>{2}, y<em>{1} y</em>{3}, y<em>{2} y</em>{1}, y<em>{2}^{2}, y</em>{2} y<em>{3}, y</em>{3} y<em>{1}, y</em>{3} y<em>{2}, y</em>{3}^{2}\right)^{T}} \ {\phi(\mathbf{x})^{T} \phi(\mathbf{y})=\sum<em>{i, j=1}^{3} x</em>{i} x<em>{j} y</em>{i} y_{j}}\end{array}$</p>
+</li>
+<li><p>However, it is computational expansive.</p>
+</li>
+<li><p>If we use kernel function, then </p>
+<p>$k(x, y)=(x^Ty)^2=(x<em>1y_1+x_2y_2+x_3y_3)^2=\sum</em>{i, j=1}^3x_ix_jy_iy_j$</p>
+</li>
+</ul>
+<p><strong>In essence, what the kernel trick does for us is to offer a more efficient and less expensive way to transform data into higher dimensions.</strong> </p>
+<p>Kernel functions:</p>
+<ul>
+<li>Polynomial kernel: $k(x, y)=(x^Ty+1)^d$</li>
+<li>RBF: $k(x, y)=e^{-\gamma||x-y||^2}, \gamma&gt;0$</li>
+<li>…</li>
+</ul>
+</li>
+<li><p>Which kernels do you know? How to choose a kernel? </p>
+<ul>
+<li>Gaussian kernel</li>
+<li>Linear kernel</li>
+<li>Polynomial kernel</li>
+<li>Laplace kernel</li>
+<li>Esoteric kernels: string kernels, chi-square kernels</li>
+<li>If number of features is large (relative to number of observations): SVM with linear kernel ; e.g. text classification with lots of words, small training example </li>
+<li>If number of features is small, number of observations is intermediate: Gaussian kernel If number of features is small, number of observations is small: linear kernel </li>
+</ul>
+</li>
+</ol>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined" target="_blank" rel="noopener">Pinecone</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://jwu424@github.io/2019/10/03/Machine%20Learning/">http://jwu424@github.io/2019/10/03/Machine%20Learning/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Machine-Learning-Interview/">Machine Learning, Interview    </a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button"><i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/wechat.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/alipay.jpg"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-full"><a href="/2019/10/03/Udacity%20Final%20Project/"><img class="prev_cover lozad" data-src="/img/avatar.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>Udacity Final Project</span></div></a></div></nav></div></div><footer><div id="footer"><div class="copyright">&copy;2019 By Pinecone</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Welcome!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><i class="nightshift fa fa-moon-o" id="nightshift" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/nightshift.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script></body></html>
