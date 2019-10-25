@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>AB testing interview question | Pinecone</title><meta name="description" content="AB testing interview question"><meta name="keywords" content="AB Testing"><meta name="author" content="Pinecone"><meta name="copyright" content="Pinecone"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="https://www.pinew.top/2019/10/12/AB%20testing%20interview%20question/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AB testing interview question"><meta name="twitter:description" content="AB testing interview question"><meta name="twitter:image" content="https://www.pinew.top/img/background9.jpg"><meta property="og:type" content="article"><meta property="og:title" content="AB testing interview question"><meta property="og:url" content="https://www.pinew.top/2019/10/12/AB%20testing%20interview%20question/"><meta property="og:site_name" content="Pinecone"><meta property="og:description" content="AB testing interview question"><meta property="og:image" content="https://www.pinew.top/img/background9.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="Summary of AB testing articles 2" href="https://www.pinew.top/2019/10/13/AB%20Test%20Summary%202/"><link rel="next" title="Summary of AB testing articles 1" href="https://www.pinew.top/2019/10/12/AB%20Test%20Summary%201/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'true',
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Bookmark',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  copyright: undefined,
+  copy_copyright_js: false
+  
+}</script></head><body><canvas class="fireworks"></canvas><div id="header"> <div id="page-header"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Pinecone</a></span><i class="fa fa-bars fa-fw toggle-menu pull-right close" aria-hidden="true"></i><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw far fa-image"></i><span> Gallery</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right" id="search_button"></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">3</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">2</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw far fa-image"></i><span> Gallery</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/img/background9.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">AB testing interview question</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-10-12<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> Updated 2019-10-25</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/AB-Testing/">AB Testing</a></span><div class="post-meta-wordcount"><span>Word count: </span><span class="word-count">1.3k</span><span class="post-meta__separator">|</span><span>Reading time: 7 min</span><span class="post-meta__separator">|</span><span>Post View: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><ol>
+<li><p>What is A/B testing?</p>
+<p>A/B testing is a method of comparing two versions of a webpage or app against each other to determine which one performs better. It is an essentially an experiment where two or more variants of a page are shown to users at random and statistical analysis is used to determine which variation performs better for a given conversion goal.</p>
+</li>
+<li><p>Describe the process of A/B test<br>A/B test can be summarized into the 5 steps below:</p>
+<ul>
+<li>choose and characterize metrics to evaluate your experiment, i.e. what do you care about, how do you want to measure the effect. Brain storm potential metrics. Use customer conversion funnel to summarize the process. Invariant metric does not relate to the change. Evaluation metrics are related to the change. We can also use OEC as our metrics.</li>
+<li>choose significant level (alpha), statistical power (1-beta) and practical significance level you really want to launch the change if the test is statistically significant</li>
+<li>Using the above information to calculate required sample size.</li>
+<li>Randomly assign each user to experiment or control group. Collect the data and wait until the required sample size is reached.</li>
+<li>Analyze the results and draw valid conclusions</li>
+</ul>
+<p>Sanity check: </p>
+<ul>
+<li>invariant metric does not change in experiment and control</li>
+<li>Test whether the number of observations in each group is significant or not.</li>
+</ul>
+<p>Analyze evaluation metrics:</p>
+<ul>
+<li>Using pooled mean/conversion probability.</li>
+<li>Calculating pooled standard deviation and margin of error (z*sd).</li>
+<li>Calculating the CI for the diff: $p_{diff}\pm z*sd$. </li>
+<li>Check whether CI includes 0. If, then retain null hypothesis and think they are no difference. Else, the difference has statistically significant.</li>
+<li><p>Compare CI with required differences to determine whether it is practical significant. </p>
+</li>
+<li><p>Sign test: confirm the result with sign test. The number of success out of total trial is statistically significant.</p>
+</li>
+</ul>
+</li>
+<li><p>Situations we can’t analyze through A/B test</p>
+<ul>
+<li><p>Can’t test new experience.</p>
+<ul>
+<li>Don’t have base of your comparison</li>
+<li>How much time needed for users to adapt to the new experience.</li>
+</ul>
+</li>
+<li><p>If need <strong>explanations.</strong></p>
+</li>
+<li><strong>Long-term effect.</strong> Since we usually just run for a couple of weeks. If look for long-term effects, then need to construct OEC, or run experiments for long and continue measuring. Both of these cases are hard actually. </li>
+<li><strong>Primacy and novelty effect</strong>. For changes that require changing user behavior (e.g., users are already used to something, or, conversely, something new flashes), you need to use caution and look for trends.</li>
+</ul>
+<p><strong>Links:</strong> <a href="https://www.quora.com/When-I-should-not-run-an-AB-test" target="_blank" rel="noopener">one</a>;</p>
+</li>
+<li><p>When not use A/B test</p>
+<ul>
+<li>You Don’t Yet Have Meaningful Traffic</li>
+<li>You Can’t Safely Spend The Time</li>
+<li>You Don’t Yet Have An Informed Hypothesis</li>
+<li>There’s Low Risk To Taking Action Right Away</li>
+</ul>
+<p><strong>Links:</strong> <a href="https://www.braze.com/blog/not-worth-ab-testing/" target="_blank" rel="noopener">one</a></p>
+</li>
+<li><p>How many variates should we have in A/B test.</p>
+<p>One single metric or an OEC. </p>
+<p>Reasons:</p>
+<ul>
+<li>A number of factors can muddy the test result water, it will be hard to figure out which one is the truly useful.</li>
+<li>Usually right now, we have enough data to analyze. It is affordable to run one first and then the others.</li>
+</ul>
+</li>
+<li><p>What should I do if I don’t trust the results?</p>
+<p>First, we should do sanity check. That’s mean we should exclude all errors.</p>
+<p>Then, if everything is fine, and we still not trust the results, the best way is to run a same AB testing again. Treat it as an entirely separate test and see if you can replicate the results. If you can replicate again and again, you probably have a solid set of results.</p>
+</li>
+<li><p>What if I do not have control?<br>A control is the existing version of a landing page or webpage that you are testing against. Sometimes you may want to test two versions of a page that never existed before… and that’s oaky. Just choose one of the variations and call that one the control. Try to pick the one that’s the most similar to how you currently design pages and use the other as the treatment.</p>
+</li>
+<li><p>When A/B test is not useful, what you can do?</p>
+<p>Can’t do:</p>
+<ul>
+<li>Analyze the user activity logs</li>
+<li>Conduct retrospective analysis</li>
+<li>Conduct user experience research</li>
+<li>Focus groups and surveys</li>
+<li>Human evaluation</li>
+</ul>
+</li>
+<li><p>Metrics</p>
+<p>There are two kind of metrics.</p>
+<ul>
+<li>Invariant metrics. Used for sanity check. It should be the same for all groups. If not, there may a bug or mistake in our design or code.</li>
+<li>Evaluation metrics. Used to determine which variant is better. Usually like CTR, DAU that measures the performance of webpages. </li>
+</ul>
+<p>There are four categories of metrics:</p>
+<ul>
+<li>Sums and counts</li>
+<li>Distribution (mean, median, percentiles)</li>
+<li>Probability and rates (click through probability and click through rate)</li>
+<li>Ratios: any two numbers divide by each other</li>
+</ul>
+<p>Sensitivity and robustness:</p>
+<ul>
+<li>You want to choose a metric that has high sensitivity, so the metric can pick up the change you care about.</li>
+<li>You also want the metric to be robust against changes you don’t care about. </li>
+<li>There is a balance between the sensitivity and robustness, you need to look into the data to find out which metric to use.</li>
+</ul>
+<p>How to measure the sensitivity and robustness?</p>
+<ul>
+<li>Run experiments</li>
+<li>Use A/A test to see if metrics pick up difference (if yes, then the metric is not robust)</li>
+<li>Retrospective analysis</li>
+</ul>
+</li>
+<li><p>Significance level, statistical power and practical significance level</p>
+<ul>
+<li>Usually the significance level is 0.05 and power is 0.8.</li>
+<li>Practical significance level varies depends on the test and the metrics</li>
+<li>Practical significance level is higher than statistical significance level.</li>
+<li>Usually, you will not launch a change that is statistically significant but not practically significant.</li>
+<li>Many cost to launch a new change: engineering cost, customer support, sales issue and opportunity cost</li>
+<li>The business impact of the change</li>
+</ul>
+</li>
+<li><p>How to estimate(calculate) sample size?<br>Required Sample size depends on 5 parameters:</p>
+<ul>
+<li><p>The conversion rate value of control variation (baseline value)</p>
+</li>
+<li><p>The minimum difference between control and experiment which is to be identified.<br>The smaller the difference between experiment and control to be identified, the bigger the sample size is required.</p>
+</li>
+<li><p>Chosen confidence/significance level</p>
+</li>
+<li><p>Chosen statistical power</p>
+</li>
+<li><p>Type of the test: one or two tailed test. Sample size for two tailed test is relatively bigger.</p>
+</li>
+</ul>
+<p>There are different kinds of online testing tools, G-power, Evan Miller, google analytics, etc.</p>
+<p>Formula for each variant: </p>
+<script type="math/tex; mode=display">n=\frac{(z_{1-\alpha}+z_{\beta}^2)\sigma^2}{diff^2}</script></li>
+</ol>
+<ol>
+<li>How to split sample?</li>
+</ol>
+<p>Usually we split in randomly and the sample size in control and experiment should be statistically equal.</p>
+<ol>
+<li><p>Correlational VS causal</p>
+<ul>
+<li><p><strong>Correlation</strong> <strong>is a statistical measure (expressed as a number) that describes the size and direction of a relationship between two or more variables.</strong> A correlation between variables, however, does not automatically mean that the change in one variable is the cause of the change in the values of the other variable.</p>
+</li>
+<li><p><strong>Causation</strong> <strong>indicates that one event is the result of the occurrence of the other event; i.e. there is a causal relationship between the two events. This is also referred to as cause and effect.</strong></p>
+</li>
+<li><p>If you see many people take umbrella today, then it may have a high chance to rain. This is correlation not causal. You can’t say that many people take umbrella lead to rain. </p>
+</li>
+<li><a href="https://www.exp-platform.com/Documents/2016-11BestRefutedCausalClaimsFromObservationalStudies.pdf" target="_blank" rel="noopener">Best Refuted Causal Claims from Observations Studies</a></li>
+</ul>
+</li>
+<li><p>Advantages of A/B test</p>
+<ul>
+<li>Scientific way to prove causality, i.e. the changes in metrics are caused by changes introduced in the treatment.</li>
+<li>Sensitivity: you can detect tiny changes to metrics</li>
+<li>Detect unexpected consequences</li>
+</ul>
+</li>
+</ol>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined" target="_blank" rel="noopener">Pinecone</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.pinew.top/2019/10/12/AB%20testing%20interview%20question/">https://www.pinew.top/2019/10/12/AB%20testing%20interview%20question/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AB-Testing/">AB Testing    </a></div><div class="post_share"><div class="social-share" data-image="/img/background9.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2019/10/13/AB%20Test%20Summary%202/"><img class="prev_cover lozad" data-src="/img/background9.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>Summary of AB testing articles 2</span></div></a></div><div class="next-post pull-right"><a href="/2019/10/12/AB%20Test%20Summary%201/"><img class="next_cover lozad" data-src="/img/background10.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>Summary of AB testing articles 1</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2019/10/12/AB Test Summary 1/" title="Summary of AB testing articles 1"><img class="relatedPosts_cover lozad"data-src="/img/background10.jpg"><div class="relatedPosts_title">Summary of AB testing articles 1</div></a></div><div class="relatedPosts_item"><a href="/2019/10/19/AB Test Summary 4/" title="Summary of AB testing articles 4"><img class="relatedPosts_cover lozad"data-src="/img/background8.jpg"><div class="relatedPosts_title">Summary of AB testing articles 4</div></a></div><div class="relatedPosts_item"><a href="/2019/10/23/AB Test Summary 5/" title="Summary of AB testing articles 5"><img class="relatedPosts_cover lozad"data-src="/img/background7.jpg"><div class="relatedPosts_title">Summary of AB testing articles 5</div></a></div><div class="relatedPosts_item"><a href="/2019/10/16/AB Test Summary 3/" title="Summary of AB testing articles 3"><img class="relatedPosts_cover lozad"data-src="/img/background10.jpg"><div class="relatedPosts_title">Summary of AB testing articles 3</div></a></div><div class="relatedPosts_item"><a href="/2019/10/13/AB Test Summary 2/" title="Summary of AB testing articles 2"><img class="relatedPosts_cover lozad"data-src="/img/background9.jpg"><div class="relatedPosts_title">Summary of AB testing articles 2</div></a></div><div class="relatedPosts_item"><a href="/2019/10/03/Udacity Final Project/" title="Udacity Final Project"><img class="relatedPosts_cover lozad"data-src="/img/background7.jpg"><div class="relatedPosts_title">Udacity Final Project</div></a></div></div><div class="clear_both"></div></div></div></div><footer><div id="footer"><div class="copyright">&copy;2019 By Pinecone</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Welcome!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><i class="nightshift fa fa-moon-o" id="nightshift" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/nightshift.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script></body></html>
