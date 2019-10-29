@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Statistics | Pinecone</title><meta name="description" content="Statistics"><meta name="keywords" content="Statistics, Interview"><meta name="author" content="Pinecone"><meta name="copyright" content="Pinecone"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="https://www.pinew.top/2019/10/27/Statistics/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Statistics"><meta name="twitter:description" content="Statistics"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jwu424/Blog_source@master/img/twukN12EN7c.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Statistics"><meta property="og:url" content="https://www.pinew.top/2019/10/27/Statistics/"><meta property="og:site_name" content="Pinecone"><meta property="og:description" content="Statistics"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/jwu424/Blog_source@master/img/twukN12EN7c.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="next" title="Summary of AB testing articles 5" href="https://www.pinew.top/2019/10/23/AB%20Test%20Summary%205/"><meta name="google-site-verification" content="google078980f9392d4c28.html"><meta name="baidu-site-verification" content="baidu_verify_4E5F1x6oOR.html"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'true',
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Bookmark',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  copyright: undefined,
+  copy_copyright_js: false
+  
+}</script></head><body><canvas class="fireworks"></canvas><div id="header"> <div id="page-header"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Pinecone</a></span><i class="fa fa-bars fa-fw toggle-menu pull-right close" aria-hidden="true"></i><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw far fa-image"></i><span> Gallery</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right" id="search_button"></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">9</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">3</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw far fa-image"></i><span> Gallery</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jwu424/Blog_source@master/img/twukN12EN7c.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">Statistics</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-10-27<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> Updated 2019-10-27</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Statistics/">Statistics</a></span><div class="post-meta-wordcount"><span>Word count: </span><span class="word-count">787</span><span class="post-meta__separator">|</span><span>Reading time: 4 min</span><span class="post-meta__separator">|</span><span>Post View: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><p>You can find the questions <a href="https://rpubs.com/JDAHAN/172473" target="_blank" rel="noopener"><strong>here</strong></a>. And I reorganized the answers and added some parts I think are necessary. </p>
+<ol>
+<li><p>How do you assess the statistical significance of an insight? </p>
+<p>We can use hypothesis to assess whether this insight happens by chance or it is a real insight.</p>
+<p><strong>Steps:</strong></p>
+<ul>
+<li>State the null hypothesis and alternative hypothesis. Usually, null hypothesis is the opposite of what we wish to test. Like A and B perform the same.</li>
+<li>Choose a suitable statistical test and statistics.</li>
+<li>Choose a critical region for the statistics to lie in that is extreme enough for the null hypothesis to be rejected (p-value)</li>
+<li>We calculate the observed test statistics from the data and check whether it lies in the critical region.</li>
+</ul>
+<p><strong>Common tests:</strong></p>
+<ul>
+<li>One sample Z test</li>
+<li><p>Two-sample Z test</p>
+</li>
+<li><p>One sample t-test</p>
+</li>
+<li>paired t-test</li>
+<li><p>Two sample pooled equal variances t-test</p>
+</li>
+<li><p>Two sample unpooled unequal variances t-test and unequal sample sizes (Welch’s t-test)</p>
+</li>
+<li>Chi-squared test for variances</li>
+<li>Chi-squared test for goodness of fit</li>
+<li>Anova (for instance: are the two regression models equals? F-test)</li>
+<li>Regression F-test (i.e: is at least one of the predictor useful in predicting the response?) </li>
+</ul>
+</li>
+<li><p>Explain what a long-tailed distribution is and provide three examples of relevant phenomena that have long tails. Why are they important in classification and regression problems? </p>
+<p>In long tailed distributions, a high frequency population is followed by a low frequency population, which gradually tails off asymptotically. </p>
+<p>Rule of thumb: majority of occurrences (more than half, and when Pareto principles applies, 80%) are accounted for by the first 20% items in the distribution.</p>
+<p>The least frequently occurring 80% of items are more important as a proportion of the total population Zipf’s law, Pareto distribution, power laws </p>
+<p><strong>EX:</strong></p>
+<ul>
+<li><p>NLP:</p>
+<ul>
+<li>Give some corpus of natural language, the frequency of any word is inversely proportional to its rank in the frequency table.</li>
+<li>The most frequent word will occur twice as often as the second most frequent, three times as often as the third most frequent.</li>
+<li>Only 135 vocabulary items are needed to account for half the English corpus! </li>
+</ul>
+</li>
+<li><p>Allocation of wealth among individuals: the larger portion of the wealth of any society is controlled by a smaller percentage of the people </p>
+</li>
+<li>File size distribution of Internet Traffic </li>
+</ul>
+<p><strong>Important:</strong></p>
+<ul>
+<li>It is a skewed distribution</li>
+<li>When we do regression, if our predictor variable is skewed, then usually our model will be bad, since we hope the distribution of error is normal. Then we may need to apply a monotone transformation on the data, like logarithm, square root.</li>
+<li>When we do classification, since our outcome are not balance, our model will tend to be biased towards to the majority class and performance bad on the minority class. Then, the metrics we used may be misleading.</li>
+<li>When we do sampling, the sample data will be more skewed. May need to use stratified sampling of random sampling.</li>
+</ul>
+</li>
+<li><p>What is the Central Limit Theorem? Explain it. Why is it important? </p>
+<p>The CLT states that the arithmetic mean of a sufficiently large number of iterates of independent random variables will be approximately normally distributed regardless of the underlying distribution. i.e: the sampling distribution of the sample mean is normally distributed.</p>
+<ul>
+<li>Used in hypothesis testing</li>
+<li>Used for confidence intervals</li>
+<li>Random variables must be iid: independent and identically distributed</li>
+<li>Finite variance </li>
+</ul>
+</li>
+<li><p>What is statistical power? </p>
+<ul>
+<li><script type="math/tex; mode=display">Power = P(reject\text{ }H_0|H_1)</script></li>
+<li>As power increases, chances of Type II error (False negative) decrease.</li>
+<li>Ability of a test to detect an effect, if the effect actually exists</li>
+<li>AB testing, using it to calculate the minimum sample size required so that one can reasonably detects an effect.</li>
+</ul>
+</li>
+<li><p>Explain selection bias (with regard to a dataset, not variable selection). Why is it important? How can data management procedures such as missing data handling make it worse? </p>
+<p>Selection of individuals, groups or data for analysis in such a way that proper randomization is not achieved.</p>
+<p>Types:</p>
+<ul>
+<li>Sampling bias: systematic error due to a non-random sample of a population causing some members to be less likely to be included than others.</li>
+<li>Time interval: a trial may terminated early at an extreme value (ethical reasons), but the extreme value is likely to be reached by the variable with the largest variance, even if all the variables have similar means.</li>
+<li>Data: “cherry picking”, when specific subsets of the data are chosen to support a conclusion (citing examples of plane crashes as evidence of airline flight being unsafe, while the far more common example of flights that complete safely).</li>
+<li>Studies: performing experiments and reporting only the most favorable results.</li>
+<li>Can lead to inaccurate or even erroneous conclusions.</li>
+<li>Statistical methods can generally not overcome it. </li>
+</ul>
+</li>
+</ol>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined" target="_blank" rel="noopener">Pinecone</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.pinew.top/2019/10/27/Statistics/">https://www.pinew.top/2019/10/27/Statistics/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Statistics-Interview/">Statistics, Interview    </a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jwu424/Blog_source@master/img/twukN12EN7c.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2019/10/23/AB%20Test%20Summary%205/"><img class="next_cover lozad" data-src="https://cdn.jsdelivr.net/gh/jwu424/Blog_source@master/img/DlF0mqHKvkg.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>Summary of AB testing articles 5</span></div></a></div></nav></div></div><footer><div id="footer"><div class="copyright">&copy;2019 By Pinecone</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Welcome!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><i class="nightshift fa fa-moon-o" id="nightshift" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/nightshift.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script></body></html>
